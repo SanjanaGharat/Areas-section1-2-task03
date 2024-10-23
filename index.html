@@ -6,86 +6,74 @@
     <title>Areas Served</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom Tailwind Config */
         @layer base {
             h1 {
                 color: #2A1768;
             }
             .location-card {
                 border-color: #2A1768;
-                transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease; /* Added background color transition */
+                transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
                 color: #2A1768;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-                border-radius: 1rem; /* Rounded corners */
-                background-size: 200% 200%; /* For animation effect */
+                border-radius: 1rem;
+                background-size: 200% 200%;
             }
             .location-card:hover {
                 transform: translateY(-5px);
                 box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
             }
             .location-title {
-                font-family: 'Arial', sans-serif; /* Clean font style */
-                color: white; /* Title color for visibility */
+                font-family: 'Arial', sans-serif;
+                color: white;
             }
             .map-frame {
                 width: 100%;
                 height: 100%;
-                border: none; /* No border around the iframe */
+                border: none;
             }
             .card-description {
                 transition: color 0.3s ease;
-                color: white; /* Keep description text white */
+                color: white;
             }
             .location-card:hover .card-description {
-                color: #f0f0f0; /* Slightly lighter gray for hover effect */
+                color: #f0f0f0;
             }
-            /* Specific styles for the cards */
             .first-card {
-                background: linear-gradient(-135deg, #2A1768 50%, #ccd1da 50%); /* Gradient for first card */
+                background: linear-gradient(-135deg, #2A1768 50%, #ccd1da 50%);
             }
             .first-card:hover {
-                background: #2A1768; /* Solid color on hover */
-                animation: none; /* Disable gradient animation on hover */
-                color: white; /* Change text color for visibility */
+                background: #2A1768;
+                animation: none;
+                color: white;
             }
             .middle-card {
-                background: linear-gradient(135deg, #2A1768 50%, #ccd1da 50%); /* Gradient for middle card */
+                background: linear-gradient(135deg, #2A1768 50%, #ccd1da 50%);
             }
             .middle-card:hover {
-                background: #2A1768; /* Solid color on hover */
+                background: #2A1768;
             }
             .third-card {
-                background: linear-gradient(-135deg, #2A1768 50%, #ccd1da 50%); /* Gradient for third card */
+                background: linear-gradient(-135deg, #2A1768 50%, #ccd1da 50%);
             }
             .third-card:hover {
-                background: #2A1768; /* Solid color on hover */
-                animation: none; /* Disable gradient animation on hover */
-                color: white; /* Change text color for visibility */
-            }
-        }
-
-        /* Keyframes for gradient shift for the third card */
-        @keyframes gradientShiftThird {
-            0% {
-                background-position: -135% 50%; /* Original position */
-            }
-            100% {
-                background-position: 135% 50%; /* Move to the right */
+                background: #2A1768;
+                animation: none;
+                color: white;
             }
         }
     </style>
 </head>
 <body class="bg-gray-100 h-screen font-sans">
-    <!-- Main container for the title -->
     <div class="w-full p-6 bg-white shadow-lg flex justify-center">
         <h1 class="text-center text-4xl font-bold">Areas Served</h1>
     </div>
 
     <div class="container mx-auto mt-8">
-        <!-- First container -->
         <div class="location-card border-4 rounded-lg p-6 m-6 flex items-center first-card">
             <div class="w-1/4 h-40 rounded-lg overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1887.1062714819757!2d72.83317018864167!3d18.9219841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sGateway%20Of%20India%20Mumbai!5e0!3m2!1sen!2sus!4v1729678461422!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="https://www.google.com/maps/place/Gateway+Of+India+Mumbai" target="_blank" rel="noopener noreferrer">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1887.1062714819757!2d72.83317018864167!3d18.9219841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sGateway%20Of%20India%20Mumbai!5e0!3m2!1sen!2sus!4v1729678461422!5m2!1sen!2sus" class="map-frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </a>
             </div>
             <div class="w-3/4 pl-6">
                 <h2 class="location-title text-2xl font-semibold">Mumbai</h2>
@@ -93,21 +81,23 @@
             </div>
         </div>
 
-        <!-- Second container (Middle card with specific gradient) -->
         <div class="location-card border-4 rounded-lg p-6 m-6 flex items-center middle-card">
             <div class="w-3/4">
                 <h2 class="location-title text-2xl font-semibold">Delhi</h2>
                 <p class="card-description mt-2">The capital city of India, rich in historical significance and modern vibrancy.</p>
             </div>
             <div class="w-1/4 h-40 rounded-lg overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12622.142367140232!2d77.22174010639051!3d28.681941172226693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdbc592a5653%3A0x975e06c57eab6d87!2sDr.%20Ambedkar%20National%20Memorial!5e0!3m2!1sen!2sus!4v1729678705335!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>>
+                <a href="https://www.google.com/maps/place/Dr.+Ambedkar+National+Memorial" target="_blank" rel="noopener noreferrer">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12622.142367140232!2d77.22174010639051!3d28.681941172226693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdbc592a5653%3A0x975e06c57eab6d87!2sDr.%20Ambedkar%20National%20Memorial!5e0!3m2!1sen!2sus!4v1729678705335!5m2!1sen!2sus" class="map-frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </a>
             </div>
         </div>
 
-        <!-- Third container -->
         <div class="location-card border-4 rounded-lg p-6 m-6 flex items-center third-card">
             <div class="w-1/4 h-40 rounded-lg overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30453.93970956539!2d78.43554748013604!3d17.424142662039696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97558c2e9b6b%3A0x25705363cc844e9d!2sHussain%20Sagar!5e0!3m2!1sen!2sus!4v1729678729733!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <a href="https://maps.app.goo.gl/45Y2W6ZCpDrM1Zbx5" target="_blank" rel="noopener noreferrer">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30453.93970956539!2d78.43554748013604!3d17.424142662039696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97558c2e9b6b%3A0x25705363cc844e9d!2sHussain%20Sagar!5e0!3m2!1sen!2sus!4v1729678729733!5m2!1sen!2sus" class="map-frame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </a>
             </div>
             <div class="w-3/4 pl-6">
                 <h2 class="location-title text-2xl font-semibold">Hyderabad</h2>
